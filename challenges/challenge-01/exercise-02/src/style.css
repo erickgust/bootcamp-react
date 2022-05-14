@@ -1,0 +1,31 @@
+.container {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "h h"
+    "m m"
+    "s c"
+    "f f";
+  text-align: center;
+}
+
+.container > header {
+  grid-area: h;
+}
+
+.container > nav {
+  grid-area: m;
+}
+
+.container > aside {
+  grid-area: s;
+}
+
+.container > main {
+  grid-area: c;
+}
+
+.container > footer {
+  grid-area: f;
+}
