@@ -1,0 +1,12 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main > div {
+  display: flex;
+  flex-direction: column;
+  max-width: 445px;
+  gap: 20px;
+}
