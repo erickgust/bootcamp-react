@@ -1,0 +1,12 @@
+aside > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+aside > ul > li {
+  padding: 10px;
+}
+
+aside > ul > li + li {
+  border-top: 1px solid #000;  
+}

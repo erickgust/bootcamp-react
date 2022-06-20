@@ -1,0 +1,18 @@
+button {
+  all: unset;
+  border-radius: 5px;
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.primary {
+  background-color: #04C35C;
+}
+
+.secondary {
+  outline: 2px solid #04C35C;
+  color: #04C35C;
+}
