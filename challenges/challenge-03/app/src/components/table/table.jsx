@@ -1,7 +1,8 @@
 import React from 'react'
+import { Button } from '../button'
 import './table.css'
 
-export function Table ({ cars }) {
+export function Table ({ cars, handleDelete }) {
   return (
     <table className="cars-table">
       <thead>
@@ -30,6 +31,11 @@ export function Table ({ cars }) {
             <td>{car.year}</td>
             <td>{car.plate}</td>
             <td>{car.color}</td>
+            <td>
+              <Button handleClick={handleDelete}>
+                Deletar
+              </Button>
+            </td>
           </tr>
         ))}
       </tbody>
