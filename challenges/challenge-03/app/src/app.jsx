@@ -6,10 +6,14 @@ import { Table } from './components/table'
 export function App () {
   const [cars, setCars] = useState([])
 
+  function setCarData (carData) {
+    setCars([...cars, carData])
+  }
+
   return (
     <>
       <Header />
-      <Form setCars={setCars} cars={cars} />
+      <Form setCarData={setCarData} />
       <Table cars={cars} />
     </>
   )

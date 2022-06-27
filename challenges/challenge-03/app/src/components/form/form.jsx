@@ -4,7 +4,7 @@ import { Input, InputColor } from '../input'
 
 import './form.css'
 
-export function Form ({ cars, setCars }) {
+export function Form ({ setCarData }) {
   function getFormElement (event) {
     return (elementName) => {
       return event.target.elements[elementName].value
@@ -22,7 +22,7 @@ export function Form ({ cars, setCars }) {
       color: getElement('color')
     }
 
-    setCars([...cars, data])
+    setCarData(data)
   }
 
   return (
