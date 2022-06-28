@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '../button'
+import { NoCar } from '../no-car'
 import './table.css'
 
 export function Table ({ cars, handleDelete }) {
@@ -16,13 +17,7 @@ export function Table ({ cars, handleDelete }) {
         </tr>
       </thead>
       <tbody>
-        {cars.length === 0 && (
-          <tr className='no-car'>
-            <td colSpan={6}>
-              <h1>Nenhum carro registrado</h1>
-            </td>
-          </tr>
-        )}
+        {cars.length === 0 && <NoCar />}
 
         {cars.map((car) => (
           <tr className='table-row' key={car.plate}>

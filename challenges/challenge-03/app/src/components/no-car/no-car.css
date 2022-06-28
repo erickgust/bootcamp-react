@@ -1,0 +1,17 @@
+.no-car {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.no-car > .image {
+  width: 300px;
+}
+
+.no-car > .subtitle {
+  font-weight: var(--font-regular);
+  font-size: var(--font-size-normal);
+  color: var(--black-color);
+}
