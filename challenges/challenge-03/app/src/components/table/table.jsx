@@ -32,7 +32,7 @@ export function Table ({ cars, handleDelete }) {
             <td>{car.plate}</td>
             <td>{car.color}</td>
             <td>
-              <Button handleClick={handleDelete}>
+              <Button handleClick={() => handleDelete(car)}>
                 Deletar
               </Button>
             </td>
