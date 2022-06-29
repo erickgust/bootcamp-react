@@ -23,6 +23,9 @@ export function Form ({ setCarData }) {
     }
 
     setCarData(data)
+
+    e.target.reset()
+    e.target.elements[0].focus()
   }
 
   return (
