@@ -21,11 +21,24 @@ export function Table ({ cars, handleDelete }) {
 
         {cars.map((car) => (
           <tr className='table-row' key={car.plate}>
-            <td><img src={car.image} alt={car.brandModel} /></td>
+            <td>
+              <img
+                src={car.image}
+                alt={car.brandModel}
+                style={{ maxWidth: '100px' }}
+              />
+              </td>
             <td>{car.brandModel}</td>
             <td>{car.year}</td>
             <td>{car.plate}</td>
-            <td>{car.color}</td>
+            <td>
+              <div style={{
+                width: '50px',
+                height: '50px',
+                backgroundColor: car.color,
+                borderRadius: '5px'
+              }}/>
+            </td>
             <td>
               <Button handleClick={() => handleDelete(car)}>
                 Deletar
