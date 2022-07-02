@@ -14,10 +14,13 @@ export function App () {
   useEffect(() => {
     async function getCar () {
       const response = await get(url)
-      setCars(response.reduce((acc, car) => ({
-        ...acc,
-        [car.plate]: car
-      }), {}))
+
+      if (Array.isArray(response)) {
+        setCars(response.reduce((acc, car) => ({
+          ...acc,
+          [car.plate]: car
+        }), {}))
+      }
     }
 
     getCar()
