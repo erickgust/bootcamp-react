@@ -1,10 +1,24 @@
 import React from 'react'
-import './header.css'
+import styled from 'styled-components'
+
+const StyledHeader = styled.header`
+  display: flex;
+  height: 90px;
+  background-color: var(--black-color);
+  justify-content: center;
+  align-items: center;
+
+  > .title {
+    color: var(--white-color);
+    font-size: var(--font-size-title);
+    font-weight: var(--font-bold);
+  }
+`
 
 export function Header () {
   return (
-    <header className='main-header'>
+    <StyledHeader>
       <h1 className='title'>Cadastrar Carros</h1>
-    </header>
+    </StyledHeader>
   )
 }
