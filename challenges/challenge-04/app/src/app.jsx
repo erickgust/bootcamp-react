@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 import { Form } from './components/form'
 import { Header } from './components/header'
 import { Table } from './components/table'
 import { Toast } from './components/toast'
 import { del, get, post } from './http'
+
+const StyledWrapper = styled.div`
+  display: flex;
+  padding: 50px;
+  justify-content: space-around;
+`
 
 export function App () {
   const [cars, setCars] = useState({})
@@ -51,10 +58,10 @@ export function App () {
   return (
     <>
       <Header />
-      <div className='main-wrapper'>
+      <StyledWrapper>
         <Form setCarData={setCarData} />
         <Table cars={Object.values(cars)} handleDelete={handleDelete} />
-      </div>
+      </StyledWrapper>
       <Toast visible={visible} setVisible={setVisible} toast={toast} />
     </>
   )
