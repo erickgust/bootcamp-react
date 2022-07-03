@@ -1,8 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Button } from '../button'
 import { Input, InputColor } from '../input'
 
-import './form.css'
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+`
 
 export function Form ({ setCarData }) {
   function getFormElement (event) {
@@ -29,7 +36,7 @@ export function Form ({ setCarData }) {
   }
 
   return (
-    <form className='cars-form' onSubmit={handleSubmit}>
+    <StyledForm onSubmit={handleSubmit}>
       <Input type='url' id='image'>Imagem</Input>
       <Input type='text' id='model'>Marca / Modelo</Input>
       <Input type='text' id='year'>Ano</Input>
@@ -37,6 +44,6 @@ export function Form ({ setCarData }) {
       <InputColor id='color'>Cor</InputColor>
 
       <Button type='submit'>Enviar</Button>
-    </form>
+    </StyledForm>
   )
 }
